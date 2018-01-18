@@ -39,7 +39,7 @@ In XCode, in the project navigator:
 - Add the `.xcodeproj` file
 
 In XCode, in the project navigator, select your project.
-- Add the `libRNDeviceInfo.a` from the _deviceinfo_ project to your project's _Build Phases ➜ Link Binary With Libraries_
+- Add the `libRNDeviceBrightness.a` from the _deviceinfo_ project to your project's _Build Phases ➜ Link Binary With Libraries_
 - Click `.xcodeproj` file you added before in the project navigator and go the _Build Settings_ tab. Make sure _All_ is toggled on (instead of _Basic_).
 - Look for _Header Search Paths_ and make sure it contains both `$(SRCROOT)/../react-native/React` and `$(SRCROOT)/../../React`
 - Mark both as recursive (should be OK by default).
@@ -74,7 +74,7 @@ include ':app'
 - in `MainApplication.java`:
 
 ```diff
-+ import com.learnium.RNDeviceInfo.RNDeviceInfo;
++ import org.capslock.RNDeviceBrightness.RNDeviceBrightness;
 
   public class MainApplication extends Application implements ReactApplication {
     //......
@@ -82,7 +82,7 @@ include ':app'
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
-+         new RNDeviceInfo(),
++         new RNDeviceBrightness(),
           new MainReactPackage()
       );
     }
